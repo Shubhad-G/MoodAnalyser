@@ -26,5 +26,14 @@ namespace MoodAnalyserTestProject
             string actual = moodAnalyser.analyseMood();//actual output
             Assert.AreEqual(expected, actual);//testing whether the actual output is equal to expected output 
         }
+
+        public void Test4()//test case for null reference cutom made exception
+        {
+            string expected = "happy";//expected output
+            MoodAnalyser moodAnalyser = new MoodAnalyser(null);
+            string actual = moodAnalyser.analyseMood();//actual output
+            Assert.AreEqual(expected , actual);//testing whether the actual output is equal to expected output
+        }
+
     }
 }

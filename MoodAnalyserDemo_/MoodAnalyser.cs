@@ -20,12 +20,28 @@ namespace MoodAnalyserDemo_
 
         public string analyseMood()
         {
-            if (message.ToLower().Contains("happy"))
-                return "happy";
-            else if (message.ToLower().Contains("sad"))
-                return "sad";
+            if (message != null)
+            {
+                if (message.ToLower().Contains("happy"))
+                {
+                    return "Happy";
+                }
+                else
+                {
+                    return "SAD";
+                }
+            }
             else
-                return "happy";
+            {
+                try
+                {
+                    throw new MoodAnalyserCustomException("happy");     //usecase 2 exception(nullrefexception_custom_made) for input=null and it should return Happy.
+                }
+                catch (MoodAnalyserCustomException ex)
+                {
+                    return ex.Message;
+                }
+            }
         }
     }
 }
