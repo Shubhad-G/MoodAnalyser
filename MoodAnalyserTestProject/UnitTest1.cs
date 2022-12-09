@@ -8,22 +8,22 @@ namespace MoodAnalyserTestProject
         public void Test1()//test case for happy mood
         {
             string expected = "happy";//expected output
-            MoodAnalyser moodAnalyser = new MoodAnalyser();
-            string actual = moodAnalyser.analyseMood("iam happy");//actual output
+            MoodAnalyser moodAnalyser = new MoodAnalyser("iam happy");
+            string actual = moodAnalyser.analyseMood();//actual output
             Assert.AreEqual(expected, actual);//testing whether the actual output is equal to expected output 
         }
         public void Test2()//test case for sad mood
         {
             string expected = "sad";//expected output
-            MoodAnalyser moodAnalyser = new MoodAnalyser();
-            string actual = moodAnalyser.analyseMood("iam sad");//actual output
+            MoodAnalyser moodAnalyser = new MoodAnalyser("iam sad");
+            string actual = moodAnalyser.analyseMood();//actual output
             Assert.AreEqual(expected, actual);//testing whether the actual output is equal to expected output 
         }
         public void Test3()//test case for any mood
         {
             string expected = "happy";//expected output
-            MoodAnalyser moodAnalyser = new MoodAnalyser();
-            string actual = moodAnalyser.analyseMood("iam in any mood");//actual output
+            MoodAnalyser moodAnalyser = new MoodAnalyser("iam in any mood");
+            string actual = moodAnalyser.analyseMood();//actual output
             Assert.AreEqual(expected, actual);//testing whether the actual output is equal to expected output 
         }
     }

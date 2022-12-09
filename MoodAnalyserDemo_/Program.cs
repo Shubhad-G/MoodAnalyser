@@ -11,8 +11,8 @@ namespace MoodAnalyserDemo_
         static void Main(string[] args)
         {
             Console.WriteLine("Mood analyser program");
-            MoodAnalyser moodAnalyser = new MoodAnalyser();
-            string mood =moodAnalyser.analyseMood("iam ");
+            MoodAnalyser moodAnalyser = new MoodAnalyser("iam in any  mood");
+            string mood =moodAnalyser.analyseMood();
             Console.WriteLine("mood:{0}",mood);
             Console.ReadLine();
         }
